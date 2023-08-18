@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_practice/provider/homepageprovider.dart';
+import 'package:provider_practice/screen/newhome.dart';
+import 'package:provider_practice/screen/reandom.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,7 +45,23 @@ class HomePage extends StatelessWidget {
               ),
             )
           ],
-        )
+        ),
+        Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return homepagex();
+                }));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 50,
+                width: 100,
+                color: Colors.blue,
+                child: Text('home'),
+              ),
+            )),
       ])),
     );
   }
